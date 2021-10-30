@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 'lavender': '#eaeff4',
+                'seashell': '#FEF4EB',
             }
         },
     },
