@@ -3,11 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 const listSlice = createSlice({
     name: 'list',
     initialState: {
-        search: ""
+        search: "",
+        teachers: []
     },
     reducers: {
         setSearch(state,action){
             state.search = action.payload;
+        },
+        setTeachers(state,action){
+            state.teachers = action.payload;
         }
     },
 })
