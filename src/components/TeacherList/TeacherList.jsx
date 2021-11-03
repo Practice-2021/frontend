@@ -1,17 +1,27 @@
 import {useTeachers} from "./hooks/useTeachers";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import TeacherItem from "./TeacherItem";
-
+import {actions} from "../../store";
 const TeacherList = ({className}) => {
         useTeachers();
         const {search,teachers} = useSelector((state) => state.list);
         const filteredTeachers = teachers && teachers.filter(teacher => teacher.full_name.includes(search));
+        const dispatch = useDispatch();
+        const history = useHistory();
+        const onTeacherClick = (id) => {
+            dispatch(actions.setId(id));
+            history.push(`/profile/${id}`);
+        }
         return (
         <div className={className}>
             {filteredTeachers.length > 0 ? filteredTeachers.map((teacher) =>
             <TeacherItem
-                className="w-full max-w-lg md:max-w-xs lg:max-w-sm xl:max-w-md 2xl:max-w-lg p-6 mb-2 bg-seashell"
+                className="w-full max-w-lg md:max-w-xs lg:max-w-sm
+                xl:max-w-md 2xl:max-w-lg p-6 mb-2 bg-saddle-brown
+                hover:bg-brown cursor-pointer text-white"
                 key={teacher.id}
+                onClick={() => onTeacherClick(teacher.id)}
                 fullName={teacher.full_name}
                 department={teacher.department}
                 position={teacher.position}
