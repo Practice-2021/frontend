@@ -2,10 +2,10 @@ import {useSelector} from "react-redux"
 const ProfileDisciplines = () => {
     const {teacher} = useSelector(state=>state.profile);
     return (
-        <div>
-            <p>Преподаваемые дисциплины:</p>
-            <ul>
-                {teacher.disciplines && teacher.disciplines.map((discipline) => <li>{discipline}</li>)}
+        <div className="mt-6">
+            <p className="text-lg">Преподаваемые дисциплины</p>
+            <ul className="pl-8 mt-4">
+                {teacher?.disciplines && teacher?.disciplines.map((discipline) => <li className="text-md mb-1">{discipline}</li>)}
             </ul>
         </div>
     )

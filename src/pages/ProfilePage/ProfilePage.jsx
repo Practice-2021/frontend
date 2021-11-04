@@ -7,7 +7,7 @@ import {useProfile} from "./hooks/useProfile";
 const ProfilePage = () => {
     useProfile();
     return (
-        <Layout className="w-full h-full bg-white filter drop-shadow-xl max-w-5xl">
+        <Layout className="w-full bg-white filter drop-shadow-xl max-w-5xl py-10 px-2 md:px-16 md:py-10">
             <ProfileHeader />
             <ProfileInfo />
             <ProfileDisciplines />
