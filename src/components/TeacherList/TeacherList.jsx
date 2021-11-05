@@ -1,16 +1,13 @@
 import {useTeachers} from "./hooks/useTeachers";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import TeacherItem from "./TeacherItem";
-import {actions} from "../../store";
 const TeacherList = ({className}) => {
         useTeachers();
         const {search,teachers} = useSelector((state) => state.list);
         const filteredTeachers = teachers && teachers.filter(teacher => teacher.full_name.includes(search));
-        const dispatch = useDispatch();
         const history = useHistory();
         const onTeacherClick = (id) => {
-            dispatch(actions.setId(id));
             history.push(`/profile/${id}`);
         }
         return (
