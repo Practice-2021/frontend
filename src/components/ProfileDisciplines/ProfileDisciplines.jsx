@@ -5,7 +5,7 @@ const ProfileDisciplines = () => {
         <div className="mt-6">
             <p className="text-lg">Преподаваемые дисциплины</p>
             <ul className="pl-8 mt-4">
-                {teacher?.disciplines && teacher?.disciplines.map((discipline) => <li className="text-md mb-1">{discipline}</li>)}
+                {teacher?.disciplines && teacher?.disciplines.map((discipline,id) => <li key={id} className="text-md mb-1">{discipline}</li>)}
             </ul>
         </div>
     )
