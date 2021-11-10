@@ -1,10 +1,10 @@
 import ProfileImage from "./ProfileImage";
 import ProfileHeaderContent from "./ProfileHeaderContent";
-import ProfileBackButton from "./ProfileBackButton";
+import BackButton from "../BackButton";
 const ProfileHeader = () => {
     return (
         <div className="flex">
-            <ProfileBackButton />
+            <BackButton />
             <ProfileImage className="pr-5"/>
             <ProfileHeaderContent />
         </div>
