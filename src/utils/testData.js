@@ -42,14 +42,16 @@ const teachers = [
         `
     },
     {
+        /*айди низя*/
         id: 2,
         full_name: "Басков Олег Владимирович",
         department: "Высшая математика",
         dep_link: "http://www.apmath.spbu.ru/ru/structure/depts/vm/",
-        position: "Доцент",
+        position: "Доцент",  
         email: "ov.japh@gmail.com",
         pure: "https://spbu.pure.elsevier.com/ru/persons/%D0%BE%D0%BB%D0%B5%D0%B3-%D0%B2%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87-%D0%B1%D0%B0%D1%81%D0%BA%D0%BE%D0%B2",
         timetable: "https://timetable.spbu.ru/EducatorEvents/3053",
+        /*фотку низя*/
         photo: "http://www.apmath.spbu.ru/photo/baskov.jpg",
         education_level: "Высшее",
         qualification: "Математик",
@@ -60,7 +62,9 @@ const teachers = [
         applications: 20,
         grants: 0,
         projects: 4,
+        /*низя*/
         disciplines: ["Математический анализ (практика)","Неклассические логики (лекции, практика)","Математическая логика и теория алгоритмов (лекции)"],
+        /*био низя*/
         biography: `1997 - 2006	ученик физико-математического лицея №366
         2006 - 2011	студент кафедры технологии программирования ПМ-ПУ СПбГУ
         2011 - 2014	аспирант кафедры теории управления ПМ-ПУ СПбГУ
