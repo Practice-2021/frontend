@@ -5,6 +5,7 @@ const ProfileBiography = () => {
         <div className="mt-6 bg-seashell p-4">
             <p className="text-xl mb-4">Биография</p>
             <p className="whitespace-pre-line">{teacher?.retraining}</p>
+
         </div>
     )
 }

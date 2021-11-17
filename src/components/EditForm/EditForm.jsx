@@ -36,11 +36,13 @@ const EditForm = ({className,path}) => {
             </div>
             <div className="flex flex-col w-4/5 mb-3">
                 <label>Занимаемая должность:</label>
+
                 <input className="w-full h-9 pl-2 border rounded-sm text-lg" placeholder="Введите занимаемую должность" defaultValue={teacher?.academicDegree} {...register("academicDegree")} />
             </div>
             <div className="flex flex-col w-4/5 mb-3">
                 <label>Страница на Pure:</label>
                 <input className="w-full h-9 pl-2 border rounded-sm text-lg" placeholder="Введите ссылку на страницу преподавателя" defaultValue={teacher?.pureLink} {...register("pureLink")} />
+
             </div>
             <div className="flex flex-col w-4/5 mb-3">
                 <label>Расписание:</label>
@@ -49,6 +51,7 @@ const EditForm = ({className,path}) => {
             <div className="flex flex-col w-4/5 mb-3">
                 <label>Уровень образования:</label>
                 <input className="w-full h-9 pl-2 border rounded-sm text-lg" placeholder="Введите уровень образования" defaultValue={teacher?.educationLevel} {...register("educationLevel")} />
+
             </div>
             <div className="flex flex-col w-4/5 mb-3">
                 <label>Квалификация:</label>
@@ -91,6 +94,7 @@ const EditForm = ({className,path}) => {
                 <textarea className="w-full h-32 pl-2 border rounded-sm text-lg" placeholder="Опишите некорректные данные" {...register("errorsInfo")} />
             </div>
             <button type="submit" className="bg-roof-terracotta rounded-md h-10 text-white w-1/5 hover:bg-saddle-brown">Отправить</button>
+
         </form>
     )
 }
