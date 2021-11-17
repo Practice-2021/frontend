@@ -1,4 +1,6 @@
 import ListPage from "../pages/ListPage";
+import ProfilePage from "../pages/ProfilePage";
+import EditPage from "../pages/EditPage";
 export const routes = [
     {
         path: "/",
@@ -6,8 +8,13 @@ export const routes = [
         exact: true
     },
     {
-        path: "/profile",
-        component: null,
+        path: "/profile/:id",
+        component: ProfilePage,
         exact: true
     },
+    {
+        path: "/edit/:id",
+        component: EditPage,
+        exact: true
+    }
 ];
