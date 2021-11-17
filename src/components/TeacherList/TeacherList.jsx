@@ -5,7 +5,7 @@ import TeacherItem from "./TeacherItem";
 const TeacherList = ({className}) => {
         useTeachers();
         const {search,teachers} = useSelector((state) => state.list);
-        const filteredTeachers = teachers && teachers.filter(teacher => teacher.full_name.includes(search));
+        const filteredTeachers = teachers && teachers.filter(teacher => `${teacher.lastName} ${teacher.firstName} ${teacher.middleName}`.includes(search));
         const history = useHistory();
         const onTeacherClick = (id) => {
             history.push(`/profile/${id}`);
@@ -19,9 +19,9 @@ const TeacherList = ({className}) => {
                 hover:bg-brown cursor-pointer text-white"
                 key={teacher.id}
                 onClick={() => onTeacherClick(teacher.id)}
-                fullName={teacher.full_name}
+                fullName={`${teacher.lastName} ${teacher.firstName} ${teacher.middleName}`}
                 department={teacher.department}
-                position={teacher.position}
+                position={teacher.academicDegree}
             />) : <p className="text-xl font-bold mx-auto">{`Преподавателей по запросу "${search}" не найдено`}</p>}
         </div>
     )
