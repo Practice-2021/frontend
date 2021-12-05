@@ -7,12 +7,25 @@ import store from "./store";
 import {Provider} from "react-redux";
 import {ApolloProvider} from "@apollo/client";
 import {client} from "./apollo";
+import { ReactSearchKit,  ESSearchApi} from 'react-searchkit';
+
+const searchApi = new ESSearchApi({
+  axios: {
+    url: 'https://my.es.backend.org/search/',
+    timeout: 5000,
+  }
+});
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
         <ApolloProvider client={client}>
-          <App />
+          <ReactSearchKit searchApi={searchApi}>
+            <App />
+          </ReactSearchKit>
         </ApolloProvider>
       </Provider>
     </Router>
