@@ -11,7 +11,7 @@ import { ReactSearchKit,  ESSearchApi} from 'react-searchkit';
 
 const searchApi = new ESSearchApi({
   axios: {
-    url: 'https://my.es.backend.org/search/',
+    url: 'http://159.253.21.180:4000/employee',
     timeout: 5000,
   }
 });
